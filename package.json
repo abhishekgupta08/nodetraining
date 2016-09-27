@@ -1,0 +1,28 @@
+{
+  "name": "nodetraining",
+  "version": "1.0.0",
+  "description": "node training workshop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekgupta08/nodetraining.git"
+  },
+  "keywords": [
+    "node",
+    "react"
+  ],
+  "author": "Abhishek Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishekgupta08/nodetraining/issues"
+  },
+  "homepage": "https://github.com/abhishekgupta08/nodetraining#readme",
+  "dependencies": {
+    "request": "^2.75.0",
+    "yargs": "^3.32.0"
+  }
+}
