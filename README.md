@@ -15,3 +15,6 @@ Walkthrough Gif:
 [Add walkthrough.gif to the project root]
 
 ![Video Walkthrough](https://github.com/abhishekgupta08/nodetraining/blob/master/nodetraining.gif)
+
+Javascript training 
+https://github.com/abhishekgupta08/nodetraining/blob/master/Screen%20Shot%202016-09-30%20at%201.29.38%20PM.png
