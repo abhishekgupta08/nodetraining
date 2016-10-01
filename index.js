@@ -18,7 +18,7 @@ let logStream = logPath ? fs.createWriteStream(logPath) : process.stdout;
 let port = argv.port || (argv.host === '127.0.0.1' ? 8000 : 80);
 let destinationUrl = argv.url || url.format({
   protocol: 'http',
-  host: argv.host,
+  hostname: argv.host,
   port
 });
 console.log("\n Destination url :: " + destinationUrl + "\n port = " +port);
@@ -26,13 +26,16 @@ console.log("\n Destination url :: " + destinationUrl + "\n port = " +port);
  * Proxy server
  */
 http.createServer((req, res) => {
+  destinationUrl = req.headers['x-destination-url'] ? req.headers['x-destination-url'] : destinationUrl;
+
   console.log(`\n\n Proxying request to: ${destinationUrl + req.url}`);
   logStream.write("\n\n\n Proxy request ::  " + JSON.stringify(req.headers));
   // Proxy code
   let options = {
-      headers: req.headers,
-      url: `http://127.0.0.1:8000/{req.url}`,
-      method: req.method
+    headers: req.headers,
+    //url: `http://127.0.0.1:8000/{req.url}`,
+    url: destinationUrl,
+    method: req.method
   };
 
   // Log the proxy request headers and content in the **server callback**

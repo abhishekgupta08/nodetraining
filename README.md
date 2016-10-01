@@ -1,5 +1,7 @@
 # nodetraining
 
+Time spent: 3 hours
+
 * [x] Required: Requests to port `8000` are echoed back with the same HTTP headers and body
 * [x] Required: Requests/reponses are proxied to/from the destination server
 * [x] Required: The destination server is configurable via the `--host`, `--port`  or `--url` arguments
